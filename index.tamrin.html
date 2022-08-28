@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        ::before,
+        ::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        figure {
+            position: relative;
+            width: 500px;
+            height: 400px;
+            margin: 100px auto;
+        }
+
+        figure>img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        figure::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.426);
+            opacity: 0;
+           
+        }
+
+        figure>p {
+            position: absolute;
+            top: 40%;
+            left: 24%;
+            margin-right: 40px;
+
+            color: rgb(255, 255, 255);
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            z-index: 2;
+        }
+
+        figure>span:nth-of-type(1) {
+            position: absolute;
+            color: white;
+            /* background-color: aqua; */
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            bottom: 35%;
+            left: 29%;
+
+        }
+
+        figure>strong {
+            position: absolute;
+            background-color: white;
+            padding: 5px 10px;
+            /* background-color: aqua; */
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            bottom: 25%;
+            left: 24%;
+            text-transform: uppercase;
+            z-index: 999;
+        }
+
+        figure>span {
+            z-index: 999;
+        }
+
+        figure>span:nth-of-type(2) {
+            position: absolute;
+            bottom: 42%;
+            right: 0;
+            height: 2px;
+            width: 0;
+            background-color: white;
+            transition: 2s;
+        }
+
+        figure>span:nth-of-type(3) {
+            position: absolute;
+            bottom: 0;
+            right: 53%;
+            height: 0;
+            width: 2px;
+            background-color: white;
+            transition: 2s;
+        }
+
+        figure>span:nth-of-type(4) {
+            position: absolute;
+            left: 0px;
+            bottom: 21%;
+            height: 2px;
+            width: 0;
+            background-color: white;
+            transition: 2s;
+        }
+
+        figure>span:nth-of-type(5) {
+            position: absolute;
+            top: 0px;
+            left: 21%;
+            height: 0;
+            width: 2px;
+            background-color: white;
+            transition: 2s;
+
+        }
+
+        figure:hover>span:nth-of-type(2) {
+            width: 76%;
+        }
+
+        figure:hover>span:nth-of-type(3) {
+            height: 40%;
+        }
+
+        figure:hover>span:nth-of-type(4) {
+            width: 45%;
+        }
+
+        figure:hover>span:nth-of-type(5) {
+            height: 76%;
+        }
+
+        figure:hover::after {
+            opacity: 2;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <figure>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            exercitationem aperiam maiores asperiores
+            laborum. Officia, maiores alias!</p>
+        <img src="img/Senna_Dining_Room_2-7322_Ver_2-with_BULB_2000x.progressive.webp"
+            alt="">
+
+        <span>A I D A</span>
+        <strong>mofarah</strong>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+
+    </figure>
+</body>
+
+</html>
